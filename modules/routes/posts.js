@@ -17,17 +17,16 @@ var newPosting = new mongoose.Schema({
   message: String
 });
 
-var posts = mongoose.model('posts', newPosting);
+var postModel = mongoose.model('posts', newPosting);
 
 //GET
 router.get('/', function(req, res) {
   console.log('get route hit');
-  posts.find().then(function(data) {
+  postModel.find().then(function(data) {
     console.log('data');
     res.send(data);
   }); // end find
 }); //end get route
-
 
 //POST
 router.post('/', function(req, res) {
@@ -38,8 +37,9 @@ router.post('/', function(req, res) {
     message: req.body.message
   };
   console.log(commentToAdd);
-  commentToAdd.save();
-  // res.send('Posted!');
+  var newPost = postModel(commentToAdd);
+  newPost.save();
+  res.send('Posted!');
 }); //end post
 
 module.exports = router;

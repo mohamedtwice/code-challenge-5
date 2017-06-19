@@ -46,18 +46,15 @@
 
         <div class="col-sm-9">
           <div class="row">
-            <div class="messages" ng-repeat="post in bc.allMessages">
-
-              <p>
-                {{{post.name}}} {{{post.message}}}
-
-              </p>
+            <div class="msgitem" ng-repeat="msg in bc.allMessages">
+              {{msg.name}}: {{msg.message}}
             </div>
           </div>
         </div>
-
       </div>
+
     </div>
+  </div>
   </div>
 </body>
 
