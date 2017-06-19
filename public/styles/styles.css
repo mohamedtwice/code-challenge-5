@@ -1,0 +1,24 @@
+.mainbody {
+  margin-top: 50px;
+}
+
+.form {
+  padding: 20px;
+  border: 1px solid #ccc;
+}
+
+.search {
+  padding: 20px;
+  border: 1px solid #ccc;
+}
+
+input {
+  line-height: normal;
+  width: 100%;
+  padding: 10px;
+}
+
+h3 {
+  margin-top: 0px;
+  margin-bottom: 20px;
+}
